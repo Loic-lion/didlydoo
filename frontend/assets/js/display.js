@@ -1,4 +1,4 @@
-import { deletebutton } from "./delete-event.js";
+// import { deletebutton } from "./delete-event.js";
 export function display() {
   let options = { method: "GET" };
 
@@ -90,7 +90,23 @@ export function display() {
         buttonDelete.textContent = "Delete event";
         sectionEvent.appendChild(buttonDelete);
         buttonDelete.classList.add("card_delete");
-        deletebutton();
+
+        buttonDelete.addEventListener("click", () => {
+          let cardId = event.id;
+          let deleteUrl = `http://localhost:3000/api/events/${cardId}`;
+          let deleteOptions = {
+            method: "DELETE",
+          };
+
+          fetch(deleteUrl, deleteOptions)
+            .then((res) => res.json())
+            .then((data) => {
+              console.log("Event deleted:", data);
+            })
+            .catch((err) => {
+              console.log(`Error deleting event: ${err}`);
+            });
+        });
       });
     })
     .catch((err) => {
