@@ -1,3 +1,4 @@
+import { deletebutton } from "./delete-event.js";
 export function display() {
   let options = { method: "GET" };
 
@@ -17,6 +18,16 @@ export function display() {
         sectionEvent.appendChild(nameEvent);
         nameEvent.classList.add("card_name");
 
+        let idEvent = document.createElement("div");
+        idEvent.textContent = event.id;
+        sectionEvent.appendChild(idEvent);
+        idEvent.classList.add("card_id_hidden");
+
+        let descriptionEvent = document.createElement("div");
+        descriptionEvent.textContent = event.description;
+        sectionEvent.appendChild(descriptionEvent);
+        descriptionEvent.classList.add("card_description");
+
         let table = document.createElement("table");
         sectionEvent.appendChild(table);
 
@@ -28,6 +39,7 @@ export function display() {
 
         let emptyHeaderCell = document.createElement("th");
         datesRow.appendChild(emptyHeaderCell);
+        emptyHeaderCell.style.backgroundColor = "white";
 
         event.dates.forEach((date) => {
           let dateHeaderCell = document.createElement("th");
@@ -74,6 +86,11 @@ export function display() {
             attendeeRow.appendChild(responseCell);
           });
         });
+        let buttonDelete = document.createElement("button");
+        buttonDelete.textContent = "Delete event";
+        sectionEvent.appendChild(buttonDelete);
+        buttonDelete.classList.add("card_delete");
+        deletebutton();
       });
     })
     .catch((err) => {
