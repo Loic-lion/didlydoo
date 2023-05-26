@@ -8,44 +8,36 @@ export function display() {
     .then((data) => {
       console.log(data);
       data.forEach((event) => {
-        
         let sectionEvent = document.createElement("section");
         const main = document.querySelector("main");
         main.appendChild(sectionEvent);
 
-        
         let nameEvent = document.createElement("div");
         nameEvent.textContent = event.author + "'s " + event.name;
         sectionEvent.appendChild(nameEvent);
+        nameEvent.classList.add("card_name");
 
-       
         let table = document.createElement("table");
         sectionEvent.appendChild(table);
 
-        
         let thead = document.createElement("thead");
         table.appendChild(thead);
 
-        
         let datesRow = document.createElement("tr");
         thead.appendChild(datesRow);
 
-        
         let emptyHeaderCell = document.createElement("th");
         datesRow.appendChild(emptyHeaderCell);
 
-       
         event.dates.forEach((date) => {
           let dateHeaderCell = document.createElement("th");
           dateHeaderCell.textContent = date.date;
           datesRow.appendChild(dateHeaderCell);
         });
 
-        
         let tbody = document.createElement("tbody");
         table.appendChild(tbody);
 
-        
         let groupedAttendees = {};
         event.dates.forEach((date) => {
           date.attendees.forEach((attendee) => {
@@ -60,17 +52,14 @@ export function display() {
           });
         });
 
-        
         Object.values(groupedAttendees).forEach((attendee) => {
           let attendeeRow = document.createElement("tr");
           tbody.appendChild(attendeeRow);
 
-          
           let nameCell = document.createElement("td");
           nameCell.textContent = attendee.name;
           attendeeRow.appendChild(nameCell);
 
-          
           event.dates.forEach((date) => {
             let responseCell = document.createElement("td");
             let response = attendee.responses[date.date];
@@ -90,5 +79,4 @@ export function display() {
     .catch((err) => {
       console.log(`error ${err}`);
     });
-
 }

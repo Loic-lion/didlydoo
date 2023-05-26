@@ -11,10 +11,21 @@
   <body>
     <header>
       <h1>Didlydoo</h1>
-      <form>
-        <input type="text" placeholder="nom, prénom" />
-        <input type="text" placeholder="nom de l'event" />
-        <div class="container_date"><input type="date" /></div>
+      <form class="container">
+        <input class="container_name" type="text" placeholder="nom, prénom" />
+        <input
+          class="container_event"
+          type="text"
+          placeholder="nom de l'event"
+        />
+        <input
+          class="container_description"
+          type="text"
+          placeholder="description de l'event"
+        />
+        <div class="container_date">
+          <input class="container_date_calendar" type="date" />
+        </div>
         <button type="submit" class="button_add_event">ADD an event</button>
       </form>
       <button class="button_add_date">ADD date</button>
