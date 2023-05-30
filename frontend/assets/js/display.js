@@ -1,4 +1,3 @@
-// import { deletebutton } from "./delete-event.js";
 export function display() {
   let options = { method: "GET" };
 
@@ -79,8 +78,8 @@ export function display() {
               response !== undefined
                 ? response !== null
                   ? response
-                    ? "Oui"
-                    : "Non"
+                    ? "Yes"
+                    : "No"
                   : ""
                 : "N/A";
             attendeeRow.appendChild(responseCell);
@@ -95,24 +94,57 @@ export function display() {
         let nameCell = document.createElement("td");
         let nameInput = document.createElement("input");
         nameInput.type = "text";
+        nameInput.classList.add("input_name_attend");
         nameCell.appendChild(nameInput);
         attendeeRow.appendChild(nameCell);
 
         event.dates.forEach((date) => {
           let responseCell = document.createElement("td");
           let select = document.createElement("select");
+          select.classList.add("input_select_date");
           let option1 = document.createElement("option");
           let option2 = document.createElement("option");
 
-          option1.value = "oui";
-          option1.text = "Oui";
-          option2.value = "non";
-          option2.text = "Non";
+          option1.value = "true";
+          option1.text = "Yes";
+          option2.value = "false";
+          option2.text = "No";
 
           select.appendChild(option1);
           select.appendChild(option2);
           responseCell.appendChild(select);
           attendeeRow.appendChild(responseCell);
+        });
+
+        /////////////Boutons ajout participants///////
+
+        let buttonAddAttend = document.createElement("button");
+        buttonAddAttend.textContent = "Add attend";
+        sectionEvent.appendChild(buttonAddAttend);
+        buttonAddAttend.classList.add("card_add");
+
+        buttonAddAttend.addEventListener("click", () => {
+          let sectionParent = buttonAddAttend.closest("section");
+          let nameAttend = sectionParent.querySelector(".input_name_attend");
+          let nameValueAttend = nameAttend.value;
+          console.log(nameValueAttend);
+
+          let dateCells = sectionParent.querySelectorAll(
+            "table thead tr:first-child th:not(:first-child)"
+          );
+          let selectElements =
+            sectionParent.querySelectorAll(".input_select_date");
+
+          let selectedValues = Array.from(selectElements).map(
+            (select, index) => {
+              let dateCell = dateCells[index];
+              let date = dateCell.textContent;
+              let value = select.value;
+              return { date, value };
+            }
+          );
+
+          console.log(selectedValues);
         });
 
         ////////boutons delete/////////

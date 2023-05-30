@@ -127,4 +127,108 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Tsukimi Rounded", sans-serif;
+}
+body .container_title {
+  height: 100px;
+  background-color: wheat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .container_title h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+input[type=text],
+input[type=date] {
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+button,
+input[type=date] {
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.card_delete {
+  text-align: center;
+  width: 150px;
+}
+
+.button_add_date {
+  margin: 5px 0 5px 0;
+}
+
+main {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+main section {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main section table {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+main section table tbody {
+  vertical-align: middle;
+}
+main section table thead:first-child {
+  font-weight: 900;
+}
+main section table tr {
+  height: 40px;
+  width: 100%;
+  border: 2px solid black;
+}
+main section table td {
+  height: 30px;
+  border: 2px solid black;
+  vertical-align: middle;
+}
+main section table td:first-child {
+  font-weight: 900;
+  vertical-align: middle;
+  background-color: aliceblue;
+}
+main section table th {
+  background-color: aliceblue;
+  vertical-align: middle;
+  border: 2px solid black;
+}
+main .card_name {
+  margin-top: 10px;
+  width: 800px;
+  padding: 20px;
+  background-color: aliceblue;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.card_id_hidden {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

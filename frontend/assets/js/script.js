@@ -4,6 +4,7 @@ import { addEvent } from "./add-event.js";
 // import { Delete } from "./delete-event.js";
 
 const form = document.querySelector(".container");
+let buttonAddAttend = document.querySelectorAll
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
