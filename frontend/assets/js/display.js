@@ -86,6 +86,37 @@ export function display() {
             attendeeRow.appendChild(responseCell);
           });
         });
+
+        ////////ajout ligne nouveau participants/////////
+
+        let attendeeRow = document.createElement("tr");
+        tbody.appendChild(attendeeRow);
+
+        let nameCell = document.createElement("td");
+        let nameInput = document.createElement("input");
+        nameInput.type = "text";
+        nameCell.appendChild(nameInput);
+        attendeeRow.appendChild(nameCell);
+
+        event.dates.forEach((date) => {
+          let responseCell = document.createElement("td");
+          let select = document.createElement("select");
+          let option1 = document.createElement("option");
+          let option2 = document.createElement("option");
+
+          option1.value = "oui";
+          option1.text = "Oui";
+          option2.value = "non";
+          option2.text = "Non";
+
+          select.appendChild(option1);
+          select.appendChild(option2);
+          responseCell.appendChild(select);
+          attendeeRow.appendChild(responseCell);
+        });
+
+        ////////boutons delete/////////
+
         let buttonDelete = document.createElement("button");
         buttonDelete.textContent = "Delete event";
         sectionEvent.appendChild(buttonDelete);
