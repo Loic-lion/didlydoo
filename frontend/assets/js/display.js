@@ -1,3 +1,5 @@
+import { contentEditable } from "./edit-content.js";
+
 export function display() {
   let options = { method: "GET" };
 
@@ -13,7 +15,13 @@ export function display() {
         main.appendChild(sectionEvent);
 
         let nameEvent = document.createElement("div");
-        nameEvent.textContent = event.author + "'s " + event.name;
+        // nameEvent.textContent = event.author + "'s " + event.name;
+
+        nameEvent.innerHTML = `
+  <p class="card_name_author">${event.author}</p>'s
+  <p class="card_name_event">${event.name}</p>
+`;
+
         sectionEvent.appendChild(nameEvent);
         nameEvent.classList.add("card_name");
 
@@ -26,6 +34,9 @@ export function display() {
         descriptionEvent.textContent = event.description;
         sectionEvent.appendChild(descriptionEvent);
         descriptionEvent.classList.add("card_description");
+        
+
+        contentEditable(sectionEvent);
 
         let table = document.createElement("table");
         sectionEvent.appendChild(table);
@@ -134,7 +145,7 @@ export function display() {
             (select, index) => {
               let dateCell = dateCells[index];
               let date = dateCell.textContent;
-              let available = select.value === "true"; // Convertir la valeur en booléen
+              let available = select.value === "true";
               return { date, available };
             }
           );

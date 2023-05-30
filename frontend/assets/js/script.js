@@ -1,10 +1,10 @@
 import { display } from "./display.js";
 import { newDate } from "./new-date.js";
 import { addEvent } from "./add-event.js";
-// import { Delete } from "./delete-event.js";
+
 
 const form = document.querySelector(".container");
-let buttonAddAttend = document.querySelectorAll
+
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -65,4 +65,4 @@ form.addEventListener("submit", function (event) {
 
 display();
 newDate();
-// Delete();
+
