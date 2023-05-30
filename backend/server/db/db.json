@@ -1,17 +1,41 @@
 [
   {
-    "id": "197c53fb35ff",
-    "name": "dadzaazd",
-    "author": "Loic L",
-    "description": "dazdazadz",
+    "id": "8ce1cbb6e842",
+    "name": "non",
+    "author": "oui",
+    "description": "peut etre",
     "dates": [
       "2023-05-31",
+      "2023-06-01",
+      "2023-06-02",
       "2023-06-02"
     ],
-    "created_at": "2023-05-30T08:20:19.351Z",
+    "created_at": "2023-05-30T09:58:13.685Z",
     "num_modification": 0,
-    "last_modification": "2023-05-30T08:20:19.351Z",
-    "attendees": []
+    "last_modification": "2023-05-30T09:58:13.685Z",
+    "attendees": [
+      {
+        "name": "loic",
+        "dates": [
+          {
+            "date": "2023-05-31",
+            "available": true
+          },
+          {
+            "date": "2023-06-01",
+            "available": false
+          },
+          {
+            "date": "2023-06-02",
+            "available": true
+          },
+          {
+            "date": "2023-06-02",
+            "available": false
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "38b643aeb883",
@@ -57,6 +81,131 @@
           {
             "date": "2022-03-12",
             "available": false
+          }
+        ]
+      },
+      {
+        "name": "feefzfez",
+        "dates": [
+          {
+            "date": "2022-01-10",
+            "available": true
+          },
+          {
+            "date": "2022-02-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-11",
+            "available": true
+          },
+          {
+            "date": "2022-03-12",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "loic",
+        "dates": [
+          {
+            "date": "2022-01-10",
+            "available": true
+          },
+          {
+            "date": "2022-02-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-11",
+            "available": true
+          },
+          {
+            "date": "2022-03-12",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "non",
+        "dates": [
+          {
+            "date": "2022-01-10",
+            "available": true
+          },
+          {
+            "date": "2022-02-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-11",
+            "available": true
+          },
+          {
+            "date": "2022-03-12",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "oui",
+        "dates": [
+          {
+            "date": "2022-01-10",
+            "available": true
+          },
+          {
+            "date": "2022-02-10",
+            "available": false
+          },
+          {
+            "date": "2022-03-10",
+            "available": false
+          },
+          {
+            "date": "2022-03-11",
+            "available": false
+          },
+          {
+            "date": "2022-03-12",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "bernard",
+        "dates": [
+          {
+            "date": "2022-01-10",
+            "available": false
+          },
+          {
+            "date": "2022-02-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-10",
+            "available": false
+          },
+          {
+            "date": "2022-03-11",
+            "available": true
+          },
+          {
+            "date": "2022-03-12",
+            "available": true
           }
         ]
       }

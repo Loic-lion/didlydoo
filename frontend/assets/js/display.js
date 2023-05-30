@@ -86,8 +86,6 @@ export function display() {
           });
         });
 
-        ////////ajout ligne nouveau participants/////////
-
         let attendeeRow = document.createElement("tr");
         tbody.appendChild(attendeeRow);
 
@@ -116,8 +114,6 @@ export function display() {
           attendeeRow.appendChild(responseCell);
         });
 
-        /////////////Boutons ajout participants///////
-
         let buttonAddAttend = document.createElement("button");
         buttonAddAttend.textContent = "Add attend";
         sectionEvent.appendChild(buttonAddAttend);
@@ -134,20 +130,38 @@ export function display() {
           );
           let selectElements =
             sectionParent.querySelectorAll(".input_select_date");
-
           let selectedValues = Array.from(selectElements).map(
             (select, index) => {
               let dateCell = dateCells[index];
               let date = dateCell.textContent;
-              let value = select.value;
-              return { date, value };
+              let available = select.value === "true"; // Convertir la valeur en booléen
+              return { date, available };
             }
           );
-
           console.log(selectedValues);
-        });
 
-        ////////boutons delete/////////
+          let cardId = event.id;
+          let addUrl = `http://localhost:3000/api/events/${cardId}/attend`;
+          let addOptions = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: nameValueAttend,
+              dates: selectedValues,
+            }),
+          };
+
+          fetch(addUrl, addOptions)
+            .then((res) => res.json())
+            .then((data) => {
+              console.log("Dates added:", data);
+            })
+            .catch((err) => {
+              console.log(`Error adding dates: ${err}`);
+            });
+        });
 
         let buttonDelete = document.createElement("button");
         buttonDelete.textContent = "Delete event";
@@ -173,6 +187,6 @@ export function display() {
       });
     })
     .catch((err) => {
-      console.log(`error ${err}`);
+      console.log(`Error: ${err}`);
     });
 }
