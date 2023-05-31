@@ -8,17 +8,20 @@ body {
   flex-direction: column;
   text-align: center;
   font-family: "Tsukimi Rounded", sans-serif;
+  background-image: url(/frontend/assets/lines.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .container_title {
     height: 100px;
-    background-color: wheat;
     display: flex;
     align-items: center;
     justify-content: center;
 
     h1 {
-      font-size: 40px;
+      font-size: 48px;
       letter-spacing: 2px;
+      text-shadow: 0 4px 4px #598392;
     }
   }
 }
@@ -32,33 +35,64 @@ form {
   margin-top: 10px;
 }
 
-input[type="text"],
-input[type="date"] {
-  text-align: center;
-  border-radius: 8px;
-  padding: 10px;
+.container {
+  input[type="text"],
+  input[type="date"] {
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 4px #598392;
+  }
+
+  button,
+  input[type="date"] {
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 4px #598392;
+  }
 }
 
-button,
-input[type="date"] {
-  border-radius: 8px;
-  padding: 10px;
+select {
   cursor: pointer;
+  padding: 5px;
+  box-shadow: 0 4px 4px #598392;
 }
 
 .card_delete {
   text-align: center;
   width: 150px;
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(247, 61, 61);
+  }
 }
 
 .button_add_date {
   margin: 5px 0 5px 0;
+  padding: 6px;
+  box-shadow: 0 4px 4px #598392;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button {
+  &:hover {
+    transition: transform 0.3s;
+    transform: scale(1.2);
+  }
 }
 
 main {
   height: auto;
   display: flex;
   flex-direction: column;
+
+  .card_description {
+    background-color: transparent;
+  }
 
   section {
     margin: auto;
@@ -68,7 +102,7 @@ main {
 
     table {
       border: 2px solid black;
-      border-radius: 10px;
+      border-radius: 20px;
 
       tbody {
         vertical-align: middle;
@@ -94,12 +128,12 @@ main {
         &:first-child {
           font-weight: 900;
           vertical-align: middle;
-          background-color: aliceblue;
+          background-color: whitesmoke;
         }
       }
 
       th {
-        background-color: aliceblue;
+        background-color: whitesmoke;
         vertical-align: middle;
         border: 2px solid black;
       }
@@ -110,9 +144,13 @@ main {
     margin-top: 10px;
     width: 800px;
     padding: 20px;
-    background-color: aliceblue;
-    font-size: 20px;
+    background-color: #006d77;
+    color: whitesmoke;
+    font-size: 22px;
     font-weight: 900;
+    border-radius: 12px;
+    box-shadow: 0 4px 4px rgba(49, 48, 48, 0.3);
+    text-shadow: 0 4px 4px rgba(5, 5, 5, 0.5);
   }
 }
 
@@ -120,8 +158,10 @@ main {
   display: none;
 }
 
+input[type="text"] {
+  border-radius: 8px;
+}
+
 .hidden {
   display: none;
 }
-
-

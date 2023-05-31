@@ -36,9 +36,13 @@ export function contentEditable(sectionEvent) {
     descriptionEventEdit = descriptionEventEdit.textContent;
 
     console.log(nameAuthorEdit);
+    console.log(nameEventEdit);
+    console.log(descriptionEventEdit);
 
-    let cardId = sectionEvent.id; // Utilisez sectionEvent au lieu de event
-    let addUrl = `http://localhost:3000/api/events/${cardId}/attend`;
+    let cardId = sectionEvent.querySelector(".card_id_hidden");
+    let id = cardId.textContent;
+    console.log(id);
+    let addUrl = `http://localhost:3000/api/events/${id}`;
     let addOptions = {
       method: "PATCH",
       headers: {

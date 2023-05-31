@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" defer src="./assets/js/script.js"></script>
-    <link rel="stylesheet" href="assets/scss/css/main.css" />
+    <link rel="stylesheet" href="./assets/scss/main.css" />
     <title>Document</title>
   </head>
   <body>
@@ -14,21 +20,33 @@
         <h1>Didlydoo</h1>
       </div>
       <form class="container">
-        <input class="container_name" type="text" placeholder="nom, prénom" />
+        <input
+          class="container_name"
+          type="text"
+          placeholder="nom, prénom"
+          required
+          maxlength="256"
+        />
         <input
           class="container_event"
           type="text"
           placeholder="nom de l'event"
+          required
+          maxlength="256"
         />
         <input
           class="container_description"
           type="text"
           placeholder="description de l'event"
+          required
+          maxlength="256"
         />
         <div class="container_date">
-          <input class="container_date_calendar" type="date" />
+          <input class="container_date_calendar" type="date" required />
         </div>
-        <button type="submit" class="button_add_event">ADD an event</button>
+        <button type="submit" class="button_add_event" required>
+          ADD an event
+        </button>
       </form>
       <button class="button_add_date">ADD date</button>
     </header>
