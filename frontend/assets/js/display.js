@@ -1,4 +1,5 @@
 import { contentEditable } from "./edit-content.js";
+import { bestDay } from "./best-day.js";
 
 export function display() {
   let options = { method: "GET" };
@@ -15,7 +16,6 @@ export function display() {
         main.appendChild(sectionEvent);
 
         let nameEvent = document.createElement("div");
-        // nameEvent.textContent = event.author + "'s " + event.name;
 
         nameEvent.innerHTML = `
   <p class="card_name_author">${event.author}</p>'s
@@ -34,7 +34,6 @@ export function display() {
         descriptionEvent.textContent = event.description;
         sectionEvent.appendChild(descriptionEvent);
         descriptionEvent.classList.add("card_description");
-        
 
         contentEditable(sectionEvent);
 
@@ -124,6 +123,8 @@ export function display() {
           responseCell.appendChild(select);
           attendeeRow.appendChild(responseCell);
         });
+        //////////FONCTION POUR DESIGNER MEILLEUR JOUR//////
+        bestDay(table);
 
         let buttonAddAttend = document.createElement("button");
         buttonAddAttend.textContent = "Add attend";

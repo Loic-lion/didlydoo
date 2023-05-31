@@ -5,7 +5,6 @@ import { addEvent } from "./add-event.js";
 
 const form = document.querySelector(".container");
 
-
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -13,38 +12,38 @@ form.addEventListener("submit", function (event) {
   const eventInput = document.querySelector(".container_event");
   const descriptionInput = document.querySelector(".container_description");
   const dateInputs = document.querySelectorAll('input[type="date"]');
-  const dateInputNew = [];
+  // const dateInputNew = [];
 
-  dateInputs.forEach((input) => {
-    dateInputNew.push(input.value);
-  });
+  // dateInputs.forEach((input) => {
+  //   dateInputNew.push(input.value);
+  // });
 
-  if (nameInput.value === "") {
-    alert('Le champ "Nom" est vide');
-    return;
-  }
+  // if (nameInput.value === "") {
+  //   alert('Le champ "Nom" est vide');
+  //   return;
+  // }
 
-  if (eventInput.value === "") {
-    alert('Le champ "Événement" est vide');
-    return;
-  }
+  // if (eventInput.value === "") {
+  //   alert('Le champ "Événement" est vide');
+  //   return;
+  // }
 
-  if (descriptionInput.value === "") {
-    alert('Le champ "Description" est vide');
-    return;
-  }
+  // if (descriptionInput.value === "") {
+  //   alert('Le champ "Description" est vide');
+  //   return;
+  // }
 
-  let allDatesEmpty = true;
-  dateInputNew.forEach((date) => {
-    if (date !== "") {
-      allDatesEmpty = false;
-    }
-  });
+  // let allDatesEmpty = true;
+  // dateInputNew.forEach((date) => {
+  //   if (date !== "") {
+  //     allDatesEmpty = false;
+  //   }
+  // });
 
-  if (allDatesEmpty) {
-    alert('Le champ "Date" est vide');
-    return;
-  }
+  // if (allDatesEmpty) {
+  //   alert('Le champ "Date" est vide');
+  //   return;
+  // }
 
   addEvent();
 
@@ -65,4 +64,5 @@ form.addEventListener("submit", function (event) {
 
 display();
 newDate();
+
 
