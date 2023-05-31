@@ -1,0 +1,147 @@
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Tsukimi Rounded", sans-serif;
+    background-image: url(/frontend/assets/unsplash_lines.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    .container_title {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      h1 {
+        font-size: 48px;
+        letter-spacing: 2px;
+        text-shadow: 0 4px 4px #598392;
+      }
+    }
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .container {
+  
+    input[type="text"],
+    input[type="date"] {
+      text-align: center;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 4px 4px #598392;
+    }
+  
+    input[type="date"] {
+      border-radius: 8px;
+      padding: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 4px #598392;
+    }
+  }
+  
+  select {
+    cursor: pointer;
+    padding: 5px;
+    box-shadow: 0 4px 4px #598392;
+    border-radius: 8px;
+  }
+  
+  main {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  
+    section {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+  
+      table {
+  
+  
+        tbody {
+          vertical-align: middle;
+        }
+  
+        thead {
+          &:first-child {
+            font-weight: 900;
+          }
+        }
+  
+        tr {
+          height: 40px;
+          width: 100%;
+          border: 2px solid black;
+        }
+  
+        td {
+          height: 30px;
+          border: 2px solid black;
+          vertical-align: middle;
+  
+          &:first-child {
+            font-weight: 900;
+            vertical-align: middle;
+            background-color: whitesmoke;
+          }
+        }
+  
+        th {
+          background-color: whitesmoke;
+          vertical-align: middle;
+          border: 2px solid black;
+          padding: 0 5px 0 5px;
+        }
+      }
+      
+    }
+  
+    .card_name {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      width: 800px;
+      padding: 20px;
+      background-color: #006d77;
+      color: whitesmoke;
+      font-size: 22px;
+      font-weight: 900;
+      border-radius: 12px;
+      box-shadow: 0 4px 4px rgba(49, 48, 48, 0.3);
+      text-shadow: 0 4px 4px rgba(5, 5, 5, 0.5);
+    }
+  
+    .card_name_event {
+      margin-left: 8px;
+    }
+  }
+  
+  .input_name_attend {
+    width: 120px;
+  }
+  
+  .card_id_hidden,
+  .hidden {
+    display: none;
+  }
+  
+  input[type="text"] {
+    border-radius: 8px;
+  }
+
+  .best_day {
+    background-color: rgba(0, 128, 0, 0.397);
+  }

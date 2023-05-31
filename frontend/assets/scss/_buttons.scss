@@ -1,0 +1,45 @@
+button {
+  box-shadow: 0 4px 4px #598392;
+  cursor: pointer;
+
+  &:hover {
+    transition: transform 0.3s;
+    transform: scale(1.2);
+  }
+}
+
+.button_add_event {
+  height: 38px;
+  width: 100px;
+  margin-left: 8px;
+  border-radius: 8px;
+}
+
+.button_add_date {
+  width: 150px;
+  padding: 6px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.button_edit,
+.card_add {
+  width: 150px;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.card_delete {
+  text-align: center;
+  width: 150px;
+  padding: 5px;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: rgb(247, 61, 61);
+  }
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}

@@ -127,4 +127,173 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Tsukimi Rounded", sans-serif;
+  background-image: url(/frontend/assets/unsplash_lines.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body .container_title {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .container_title h1 {
+  font-size: 48px;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 4px #598392;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.container input[type=text],
+.container input[type=date] {
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 4px #598392;
+}
+.container input[type=date] {
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 4px #598392;
+}
+
+select {
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: 0 4px 4px #598392;
+  border-radius: 8px;
+}
+
+main {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+main section {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+main section table tbody {
+  vertical-align: middle;
+}
+main section table thead:first-child {
+  font-weight: 900;
+}
+main section table tr {
+  height: 40px;
+  width: 100%;
+  border: 2px solid black;
+}
+main section table td {
+  height: 30px;
+  border: 2px solid black;
+  vertical-align: middle;
+}
+main section table td:first-child {
+  font-weight: 900;
+  vertical-align: middle;
+  background-color: whitesmoke;
+}
+main section table th {
+  background-color: whitesmoke;
+  vertical-align: middle;
+  border: 2px solid black;
+  padding: 0 5px 0 5px;
+}
+main .card_name {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 800px;
+  padding: 20px;
+  background-color: #006d77;
+  color: whitesmoke;
+  font-size: 22px;
+  font-weight: 900;
+  border-radius: 12px;
+  box-shadow: 0 4px 4px rgba(49, 48, 48, 0.3);
+  text-shadow: 0 4px 4px rgba(5, 5, 5, 0.5);
+}
+main .card_name_event {
+  margin-left: 8px;
+}
+
+.input_name_attend {
+  width: 120px;
+}
+
+.card_id_hidden,
+.hidden {
+  display: none;
+}
+
+input[type=text] {
+  border-radius: 8px;
+}
+
+.best_day {
+  background-color: rgba(0, 128, 0, 0.397);
+}
+
+button {
+  box-shadow: 0 4px 4px #598392;
+  cursor: pointer;
+}
+button:hover {
+  transition: transform 0.3s;
+  transform: scale(1.2);
+}
+
+.button_add_event {
+  height: 38px;
+  width: 100px;
+  margin-left: 8px;
+  border-radius: 8px;
+}
+
+.button_add_date {
+  width: 150px;
+  padding: 6px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.button_edit,
+.card_add {
+  width: 150px;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.card_delete {
+  text-align: center;
+  width: 150px;
+  padding: 5px;
+  border-radius: 8px;
+}
+.card_delete:hover {
+  background-color: rgb(247, 61, 61);
+}
+.card_delete:last-child {
+  margin-bottom: 20px;
 }/*# sourceMappingURL=main.css.map */
