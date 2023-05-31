@@ -1,4 +1,4 @@
-# didlydoo
+# Didlydoo-app
 ## Projet en groupe
 __Création d'un event planner avec de l'html, du scss et du js.__
 * Réalisé par [Alexandra Petit](https://github.com/Alexpe77), [Ismaël Mesmoudi](https://github.com/is8722) et [Lion Loïc](https://github.com/Loic-lion)
