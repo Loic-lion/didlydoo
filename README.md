@@ -6,9 +6,9 @@ __Création d'un event planner avec de l'html, du scss et du js.__
 * Réalisé au cours de la formation BeCode
 * Utilisation de Node.js 
 ## Fonctionnalités
-* Affichage des events et des disponnibilités des participants
+* Affichage des events et des disponibilités des participants
 * Les utilisateurs peuvent créer des events
-* Les utilisateurs peuvent ajouter leurs disponnibilités
+* Les utilisateurs peuvent ajouter leurs disponibilités
 * Possibilité d'éditer les informations d'un event déjà créé
 * Possibilité de supprimer un event
 * Les utilisateurs sont limité dans les charactères qu'ils peuvent entrer
